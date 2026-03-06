@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
 
-  const { user, logout, orders } = useAuth();
+  const { user, logout, orders = [] } = useAuth();
   const navigate = useNavigate();
 
   /* Protect profile route */
