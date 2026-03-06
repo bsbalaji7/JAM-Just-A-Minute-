@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 
-/* ---------------- GEMINI SETUP ---------------- */
+/* ---------------- GEMINI AI SETUP ---------------- */
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
@@ -46,22 +46,31 @@ const geminiModel = genAI.getGenerativeModel({
   systemInstruction: `
 You are JAM AI Stylist for the JAM (Just A Minute) e-commerce platform.
 
-Tasks:
-- Suggest clothing styles
+Your tasks:
+- Analyze uploaded user images
+- Detect body structure
+- Detect skin tone
 - Suggest dress colors
-- Provide fashion advice
+- Suggest clothing styles
 - Recommend JAM store products
 
-Response format:
+Reply format:
 
 ## Style Analysis
+Explain body type and skin tone.
+
 ## Best Colors
+List colors suitable for the user.
+
 ## Best Dress Types
+Recommend clothing styles.
+
 ## JAM Product Suggestions
+Suggest clothing items available in JAM store.
 `
 });
 
-/* ---------------- AI CHAT ROUTE ---------------- */
+/* ---------------- AI CHAT API ---------------- */
 
 app.post("/api/chat", upload.single("image"), async (req, res) => {
   try {
@@ -69,8 +78,6 @@ app.post("/api/chat", upload.single("image"), async (req, res) => {
     const message = req.body.message || "Suggest dress for me";
 
     const parts = [{ text: message }];
-
-    /* ---------- IMAGE HANDLING ---------- */
 
     if (req.file) {
 
@@ -86,7 +93,7 @@ app.post("/api/chat", upload.single("image"), async (req, res) => {
       fs.unlinkSync(req.file.path);
     }
 
-    /* ---------- TRY GEMINI ---------- */
+    /* ---------------- TRY GEMINI ---------------- */
 
     try {
 
@@ -105,48 +112,19 @@ app.post("/api/chat", upload.single("image"), async (req, res) => {
 
     } catch (geminiError) {
 
-      console.log("⚠ Gemini failed → switching to OpenRouter");
+      console.log("Gemini quota exceeded → switching to OpenRouter");
 
-      /* ---------- OPENROUTER FALLBACK ---------- */
+      /* ---------------- OPENROUTER FALLBACK ---------------- */
 
       const response = await axios.post(
         "https://openrouter.ai/api/v1/chat/completions",
         {
-          model: "openai/gpt-3.5-turbo",
+          model: "mistralai/mistral-7b-instruct",
           messages: [
             {
               role: "system",
-              content: `
-You are JAM AI Stylist.
-
-systemInstruction: 
-You are JAM AI Stylist for the JAM (Just A Minute) e-commerce platform.
-
-Your role is to help users choose the best clothing style.
-
-Always respond using this structure:
-
-# 👗 Style Analysis
-Briefly explain the user's body type or styling advice.
-
-# 🎨 Best Colors
-Provide 3–5 color suggestions using bullet points.
-
-# 👕 Best Dress Types
-Provide 3 dress types with short explanations.
-
-# 🛍 JAM Product Suggestions
-Recommend clothing items available in JAM store.
-
-Rules:
-- Use headings
-- Use bullet points
-- Keep answers short
-- Make responses visually clear
-`
-
-
-
+              content:
+                "You are JAM AI Stylist. Suggest dress colors, clothing styles and fashion advice."
             },
             {
               role: "user",
@@ -157,9 +135,7 @@ Rules:
         {
           headers: {
             Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-            "Content-Type": "application/json",
-            "HTTP-Referer": "http://localhost:5000",
-            "X-Title": "JAM AI Stylist"
+            "Content-Type": "application/json"
           }
         }
       );
@@ -171,7 +147,7 @@ Rules:
 
   } catch (error) {
 
-    console.error("❌ AI ERROR:", error.message);
+    console.error("AI ERROR:", error);
 
     res.status(500).json({
       reply: "⚠️ AI server error"
@@ -188,7 +164,9 @@ if (!MONGO_URI) {
 }
 
 mongoose
-  .connect(MONGO_URI, { serverSelectionTimeoutMS: 10000 })
+  .connect(MONGO_URI, {
+    serverSelectionTimeoutMS: 10000
+  })
   .then(() => {
 
     console.log("✅ MongoDB Connected");
