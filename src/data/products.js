@@ -671,3 +671,115 @@ export const products = [
   description: 'Professional DJ setup with sound system, dance floor lighting and party decoration.'
 },
 ]
+export const upcomingEvents = [
+  {
+    eventName: 'SPB Golden Night Tribute',
+    language: 'Tamil',
+    category: 'Music Concert',
+    location: 'Kamarajar Arangam, Chennai',
+    date: '2026-04-12',
+    time: '7:00 PM',
+    ticketPrice: 500,
+    image: 'images/spb.jpg',
+    description: 'A tribute concert celebrating the legendary singer SP Balasubrahmanyam.'
+  },
+  {
+    eventName: 'Anirudh Live Concert',
+    language: 'Tamil',
+    category: 'Music Concert',
+    location: 'YMCA Grounds, Nandanam, Chennai',
+    date: '2026-05-02',
+    time: '6:00 PM',
+    ticketPrice: 1500,
+    image: 'images/anirudh.jpg',
+    description: 'Live performance by Anirudh Ravichander featuring his blockbuster songs.'
+  },
+  {
+    eventName: 'Yuvan Shankar Raja Musical Night',
+    language: 'Tamil',
+    category: 'Music Concert',
+    location: 'Nehru Indoor Stadium, Chennai',
+    date: '2026-05-20',
+    time: '7:30 PM',
+    ticketPrice: 1200,
+    image: 'images/yuvan.jpg',
+    description: "Enjoy live performances of Yuvan Shankar Raja's popular hits."
+  },
+  {
+    eventName: 'Tamil Stand-up Comedy Night',
+    language: 'Tamil',
+    category: 'Comedy Show',
+    location: 'Medai - The Stage, Alwarpet, Chennai',
+    date: '2026-04-18',
+    time: '8:00 PM',
+    ticketPrice: 399,
+    image: 'images/comedy.jpg',
+    description: 'A hilarious Tamil stand-up comedy show featuring famous comedians.'
+  },
+  {
+    eventName: 'Chennai Food Festival',
+    language: 'Tamil',
+    category: 'Food Festival',
+    location: 'Island Grounds, Chennai',
+    date: '2026-04-25',
+    time: '11:00 AM',
+    ticketPrice: 200,
+    image: 'images/foodfest.jpg',
+    description: 'Explore delicious Tamil Nadu cuisine from top chefs and restaurants.'
+  },
+  {
+    eventName: 'Margazhi Classical Music Festival',
+    language: 'Tamil',
+    category: 'Classical Music',
+    location: 'Music Academy, Chennai',
+    date: '2026-12-20',
+    time: '6:30 PM',
+    ticketPrice: 800,
+    image: 'images/classical.jpg',
+    description: 'Carnatic music performances by top classical musicians.'
+  },
+  {
+    eventName: 'Tamil Theatre Drama',
+    language: 'Tamil',
+    category: 'Drama',
+    location: 'Narada Gana Sabha, Chennai',
+    date: '2026-04-10',
+    time: '6:00 PM',
+    ticketPrice: 300,
+    image: 'images/drama.jpg',
+    description: 'A traditional Tamil stage drama performance.'
+  },
+  {
+    eventName: 'Chennai Tech Hackathon',
+    language: 'English / Tamil',
+    category: 'Technology',
+    location: 'IIT Madras, Chennai',
+    date: '2026-06-15',
+    time: '9:00 AM',
+    ticketPrice: 500,
+    image: 'images/hackathon.jpg',
+    description: 'A 24-hour hackathon for developers, designers, and innovators.'
+  },
+  {
+    eventName: 'Kollywood Dance Festival',
+    language: 'Tamil',
+    category: 'Dance Show',
+    location: 'Phoenix Market City, Chennai',
+    date: '2026-05-05',
+    time: '5:00 PM',
+    ticketPrice: 350,
+    image: 'images/dance.jpg',
+    description: 'Dance performances featuring popular Tamil movie songs.'
+  },
+  {
+    eventName: 'Tamil Literature Festival',
+    language: 'Tamil',
+    category: 'Book Event',
+    location: 'Anna Centenary Library, Chennai',
+    date: '2026-07-10',
+    time: '10:00 AM',
+    ticketPrice: 100,
+    image: 'images/literature.jpg',
+    description: 'Meet famous Tamil authors and explore Tamil literature.'
+  }
+];

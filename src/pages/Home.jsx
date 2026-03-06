@@ -12,7 +12,7 @@ const categories = [
   { name: 'Electronics', icon: '🎧', iconBg: 'bg-blue-100' },
   { name: 'Events', icon: '🎉', iconBg: 'bg-violet-100' },
   { name: 'Fashion', icon: '👕', iconBg: 'bg-fuchsia-100' },
-  { name: 'Ev  Book', icon: '👕', iconBg: 'bg-fuchsia-100' },
+  { name: 'EV Books', type: 'Events', title: 'Upcoming Events', icon: 'EV', iconBg: 'bg-fuchsia-100' },
 ];
 
 const Home = () => {
@@ -80,7 +80,11 @@ const Home = () => {
           {categories.map((cat) => (
             <button
               key={cat.name}
-              onClick={() => navigate(`/category?type=${encodeURIComponent(cat.name)}`)}
+              onClick={() => {
+                const categoryType = cat.type || cat.name;
+                const categoryTitle = cat.title || categoryType;
+                navigate(`/category?type=${encodeURIComponent(categoryType)}&title=${encodeURIComponent(categoryTitle)}`);
+              }}
               className="group h-64 bg-white rounded-[34px] border border-gray-200/80 hover:shadow-lg transition-all text-center flex flex-col items-center justify-center gap-7"
             >
               <div className={`w-24 h-24 ${cat.iconBg} rounded-[22px] flex items-center justify-center text-5xl group-hover:scale-105 transition-transform`}>
@@ -165,3 +169,5 @@ const Home = () => {
 };
 
 export default Home;
+
+
