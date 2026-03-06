@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category | JAM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><i class="fas fa-clock"></i> JAM</a>
+        <div class="nav-actions">
+            <a href="index.html" class="icon-btn"><i class="fas fa-home"></i></a>
+            <button class="icon-btn" id="cartToggle">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge cart-count">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 id="categoryTitle" style="margin: 2rem 0;">Products</h2>
+        <div class="product-grid" id="productGrid"></div>
+    </div>
+
+    <!-- Sliding Cart -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-header">
+            <h3>My Cart</h3>
+            <button id="closeCart" style="background:none; border:none; font-size:1.5rem; cursor:pointer">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div style="display:flex; justify-content:space-between; margin-bottom:1rem; font-weight:bold; font-size:1.2rem">
+                <span>Total</span>
+                <span>₹<span id="cartTotal">0</span></span>
+            </div>
+            <button class="checkout-btn" onclick="window.cart.checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script type="module">
+        import { products } from './js/products.js';
+        import { Cart } from './js/cart.js';
+        window.cart = Cart;
+        window.products = products;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('type') || 'All';
+            document.getElementById('categoryTitle').textContent = cat;
+            
+            const grid = document.getElementById('productGrid');
+            const filtered = cat === 'All' ? products : products.filter(p => p.category === cat);
+            
+            grid.innerHTML = filtered.map(p => `
+                <div class="product-card">
+                    <img src="${p.img}" class="product-img" alt="${p.name}">
+                    <div class="rating">★ ${p.rating} • ${p.time}</div>
+                    <h3 style="font-size:1.1rem; margin-bottom:0.5rem">${p.name}</h3>
+                    <p style="font-size:0.8rem; color:#666; height:60px; overflow:hidden; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;">${p.desc}</p>
+                    <div class="price-row">
+                        <span style="font-weight:800; font-size:1.1rem">₹${p.price}</span>
+                        <button class="add-btn" onclick="window.cart.add(${p.id})">ADD</button>
+                    </div>
+                </div>
+            `).join('');
+
+            Cart.updateUI();
+            
+            document.getElementById('cartToggle').onclick = () => document.getElementById('cartOverlay').classList.toggle('active');
+            document.getElementById('closeCart').onclick = () => document.getElementById('cartOverlay').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

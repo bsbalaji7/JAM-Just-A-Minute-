@@ -1,0 +1,673 @@
+export const products = [
+  // GROCERY
+  {
+    id: 'g1',
+    category: 'Grocery',
+    name: 'Fresh Farm Milk',
+    price: 60,
+    discount: '5% OFF',
+    rating: 4.8,
+    deliveryTime: '10 mins',
+    image: 'https://images.unsplash.com/photo-1563636619-e91000f88f5d?auto=format&fit=crop&w=300&q=80',
+    description: 'Fresh, pure farm milk delivered chilled to your doorstep. High in calcium and essential nutrients for a healthy start to your day.'
+  },
+  {
+    id: 'g2',
+    category: 'Grocery',
+    name: 'Multigrain Brown Bread',
+    price: 45,
+    discount: '10% OFF',
+    rating: 4.5,
+    deliveryTime: '12 mins',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80',
+    description: 'Healthy and fiber-rich multigrain bread. Perfectly toasted for breakfast or used for nutritious sandwiches throughout the day.'
+  },
+  {
+    id: 'g3',
+    category: 'Grocery',
+    name: 'Organic Brown Eggs (6pcs)',
+    price: 90,
+    discount: 'Buy 2 Get 10% OFF',
+    rating: 4.9,
+    deliveryTime: '15 mins',
+    image: 'https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=300&q=80',
+    description: 'Farm-fresh organic brown eggs. Rich in protein and Omega-3, sourced from happy, free-range chickens.'
+  },
+  {
+    id: 'g4',
+    category: 'Grocery',
+    name: 'Basmati Premium Rice',
+    price: 180,
+    discount: '₹20 OFF',
+    rating: 4.7,
+    deliveryTime: '20 mins',
+    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=300&q=80',
+    description: 'Long-grain aromatic Basmati rice. Perfect for biryanis, pulao, or plain steamed rice with your favorite dal.'
+  },
+  {
+    id: 'g5',
+    category: 'Grocery',
+    name: 'Cold Pressed Sunflower Oil',
+    price: 210,
+    discount: '15% OFF',
+    rating: 4.6,
+    deliveryTime: '18 mins',
+    image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=300&q=80',
+    description: 'Healthy cold-pressed sunflower oil for all your cooking needs. Low in saturated fats and high in Vitamin E.'
+  },
+  {
+    id: 'g6',
+    category: 'Grocery',
+    name: 'Premium Wheat Flour (5kg)',
+    price: 245,
+    discount: '₹30 OFF',
+    rating: 4.8,
+    deliveryTime: '25 mins',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80',
+    description: 'Finely ground whole wheat flour for soft and fluffy rotis. Nutrient-dense and fiber-rich for better digestion.'
+  },
+  {
+    id: 'g7',
+    category: 'Grocery',
+    name: 'Refined White Sugar',
+    price: 48,
+    discount: '5% OFF',
+    rating: 4.4,
+    deliveryTime: '10 mins',
+    image: 'https://images.unsplash.com/photo-1581447100595-3a81f399e390?auto=format&fit=crop&w=300&q=80',
+    description: 'High-quality refined white sugar for all your baking and beverage needs. Dissolves quickly and tastes pure.'
+  },
+  {
+    id: 'g8',
+    category: 'Grocery',
+    name: 'Iodized Crystal Salt',
+    price: 25,
+    discount: 'Buy 1 Get 1',
+    rating: 4.9,
+    deliveryTime: '10 mins',
+    image: 'https://images.unsplash.com/photo-1518110901926-d6216f1f9444?auto=format&fit=crop&w=300&q=80',
+    description: 'Pure iodized salt to maintain your health. Essential for seasoning and adding flavor to every meal you cook.'
+  },
+  {
+    id: 'g9',
+    category: 'Grocery',
+    name: 'Premium Green Tea',
+    price: 350,
+    discount: '20% OFF',
+    rating: 4.7,
+    deliveryTime: '15 mins',
+    image: 'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=300&q=80',
+    description: 'Refreshing and antioxidant-rich green tea. Perfect for your detox routine and boosting metabolism naturally.'
+  },
+  {
+    id: 'g10',
+    category: 'Grocery',
+    name: 'Instant Curry Noodles',
+    price: 65,
+    discount: 'Free Bowl',
+    rating: 4.5,
+    deliveryTime: '8 mins',
+    image: 'https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=300&q=80',
+    description: 'Quick and tasty instant noodles with a spicy curry twist. Satisfy your midnight hunger in just 2 minutes.'
+  },
+
+  // FOOD & RESTAURANT
+  {
+    id: 'f1',
+    category: 'Food & Restaurant',
+    name: 'Margherita Classic Pizza',
+    price: 249,
+    discount: 'Flat ₹50 OFF',
+    rating: 4.6,
+    deliveryTime: '25 mins',
+    image: 'https://images.unsplash.com/photo-1574071318508-1cdbad80ad38?auto=format&fit=crop&w=300&q=80',
+    description: 'Authentic thin-crust pizza topped with fresh tomato sauce, creamy mozzarella, and fragrant basil leaves.'
+  },
+  {
+    id: 'f2',
+    category: 'Food & Restaurant',
+    name: 'Paneer Butter Masala',
+    price: 320,
+    discount: '20% OFF',
+    rating: 4.8,
+    deliveryTime: '30 mins',
+    image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=300&q=80',
+    description: 'Rich and creamy cottage cheese cubes cooked in a buttery tomato gravy with aromatic Indian spices.'
+  },
+  {
+    id: 'f3',
+    category: 'Food & Restaurant',
+    name: 'Hyderabadi Chicken Biryani',
+    price: 350,
+    discount: 'Free Raita',
+    rating: 4.9,
+    deliveryTime: '35 mins',
+    image: 'https://images.unsplash.com/photo-1563379091339-03b21bc4a4f8?auto=format&fit=crop&w=300&q=80',
+    description: 'Fragrant Basmati rice layered with succulent chicken pieces and traditional Hyderabadi masalas.'
+  },
+  {
+    id: 'f4',
+    category: 'Food & Restaurant',
+    name: 'Veg Fried Rice',
+    price: 180,
+    discount: '10% OFF',
+    rating: 4.3,
+    deliveryTime: '20 mins',
+    image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=300&q=80',
+    description: 'Classic wok-tossed rice with fresh seasonal vegetables and soy sauce for an authentic Chinese flavor.'
+  },
+  {
+    id: 'f5',
+    category: 'Food & Restaurant',
+    name: 'Spicy Hakka Noodles',
+    price: 160,
+    discount: '₹30 OFF',
+    rating: 4.4,
+    deliveryTime: '20 mins',
+    image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=300&q=80',
+    description: 'Street-style thin noodles tossed with veggies and a fiery blend of sauces for a perfect Indo-Chinese meal.'
+  },
+  {
+    id: 'f6',
+    category: 'Food & Restaurant',
+    name: 'Double Cheese Burger',
+    price: 149,
+    discount: 'Buy 1 Get 1 @ ₹99',
+    rating: 4.5,
+    deliveryTime: '15 mins',
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80',
+    description: 'Juicy vegetable patty with double slices of cheddar cheese, fresh lettuce, and our secret burger sauce.'
+  },
+  {
+    id: 'f7',
+    category: 'Food & Restaurant',
+    name: 'Tandoori Chicken Full',
+    price: 550,
+    discount: 'Extra 10% OFF',
+    rating: 4.7,
+    deliveryTime: '40 mins',
+    image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=300&q=80',
+    description: 'Whole chicken marinated in yogurt and spices, grilled to smoky perfection in a traditional clay oven.'
+  },
+  {
+    id: 'f8',
+    category: 'Food & Restaurant',
+    name: 'Garlic Butter Naan',
+    price: 60,
+    discount: 'Set of 3 @ ₹150',
+    rating: 4.6,
+    deliveryTime: '20 mins',
+    image: 'https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=300&q=80',
+    description: 'Soft and chewy leavened bread topped with minced garlic and brushed with melted butter.'
+  },
+  {
+    id: 'f9',
+    category: 'Food & Restaurant',
+    name: 'Masala Dosa Combo',
+    price: 120,
+    discount: 'Early Bird 10%',
+    rating: 4.8,
+    deliveryTime: '15 mins',
+    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=300&q=80',
+    description: 'Crispy rice crepe stuffed with spiced potato filling, served with sambar and coconut chutney.'
+  },
+  {
+    id: 'f10',
+    category: 'Food & Restaurant',
+    name: 'Spicy Pav Bhaji',
+    price: 110,
+    discount: 'Extra Butter @ ₹10',
+    rating: 4.5,
+    deliveryTime: '12 mins',
+    image: 'https://images.unsplash.com/photo-1601050633647-81a35d37c331?auto=format&fit=crop&w=300&q=80',
+    description: 'Mashed vegetable curry served with buttery toasted pav. A popular Mumbai street food favorite.'
+  },
+
+  // CAFE
+  {
+    id: 'c1',
+    category: 'Cafe',
+    name: 'Italian Cappuccino',
+    price: 180,
+    discount: '10% OFF',
+    rating: 4.7,
+    deliveryTime: '10 mins',
+    image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=300&q=80',
+    description: 'Rich espresso topped with a smooth layer of frothed milk and a dusting of cocoa powder.'
+  },
+  {
+    id: 'c2',
+    category: 'Cafe',
+    name: 'Iced Cold Coffee',
+    price: 150,
+    discount: 'Add Whipped Cream Free',
+    rating: 4.6,
+    deliveryTime: '10 mins',
+    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=300&q=80',
+    description: 'Chilled coffee blended with milk and sugar, served over ice for a refreshing caffeine kick.'
+  },
+  {
+    id: 'c3',
+    category: 'Cafe',
+    name: 'Vanilla Latte',
+    price: 210,
+    discount: 'Save ₹20',
+    rating: 4.5,
+    deliveryTime: '12 mins',
+    image: 'https://images.unsplash.com/photo-1593444209128-2447f21bac55?auto=format&fit=crop&w=300&q=80',
+    description: 'Smooth espresso mixed with steamed milk and a hint of sweet vanilla syrup.'
+  },
+  {
+    id: 'c4',
+    category: 'Cafe',
+    name: 'Dark Chocolate Mocha',
+    price: 230,
+    discount: 'Extra Choco Chips',
+    rating: 4.8,
+    deliveryTime: '15 mins',
+    image: 'https://images.unsplash.com/photo-1544787210-22bb197eb595?auto=format&fit=crop&w=300&q=80',
+    description: 'The perfect marriage of rich dark chocolate and bold espresso, topped with whipped cream.'
+  },
+  {
+    id: 'c5',
+    category: 'Cafe',
+    name: 'Thick Chocolate Shake',
+    price: 190,
+    discount: '15% OFF',
+    rating: 4.9,
+    deliveryTime: '12 mins',
+    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=300&q=80',
+    description: 'Ultra-creamy milkshake made with premium Belgian chocolate and fresh whole milk.'
+  },
+  {
+    id: 'c6',
+    category: 'Cafe',
+    name: 'Strawberry Bliss Shake',
+    price: 170,
+    discount: 'Seasonal Offer',
+    rating: 4.4,
+    deliveryTime: '12 mins',
+    image: 'https://images.unsplash.com/photo-1472555794301-77353b152fb7?auto=format&fit=crop&w=300&q=80',
+    description: 'Made with real sun-ripened strawberries and vanilla ice cream for a fruity treat.'
+  },
+  {
+    id: 'c7',
+    category: 'Cafe',
+    name: 'Grilled Cheese Sandwich',
+    price: 140,
+    discount: 'Add Fries @ ₹40',
+    rating: 4.5,
+    deliveryTime: '15 mins',
+    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=300&q=80',
+    description: 'Crispy toasted bread with a gooey, melted blend of three artisanal cheeses.'
+  },
+  {
+    id: 'c8',
+    category: 'Cafe',
+    name: 'Cheesy Garlic Bread',
+    price: 120,
+    discount: 'Set of 4 Pcs',
+    rating: 4.6,
+    deliveryTime: '12 mins',
+    image: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&w=300&q=80',
+    description: 'Toasted baguette slices rubbed with garlic butter and topped with mozzarella and herbs.'
+  },
+  {
+    id: 'c9',
+    category: 'Cafe',
+    name: 'Fudge Walnut Brownie',
+    price: 99,
+    discount: 'Get 2 @ ₹170',
+    rating: 4.8,
+    deliveryTime: '8 mins',
+    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=300&q=80',
+    description: 'Dense, gooey chocolate brownie loaded with crunchy walnuts and served warm.'
+  },
+  {
+    id: 'c10',
+    category: 'Cafe',
+    name: 'Butter Croissant',
+    price: 110,
+    discount: 'Bake Sale 20%',
+    rating: 4.7,
+    deliveryTime: '10 mins',
+    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=300&q=80',
+    description: 'Flaky, buttery, and golden-brown French pastry. Perfect with your morning coffee.'
+  },
+
+  // ELECTRONICS
+  {
+    id: 'e1',
+    category: 'Electronics',
+    name: 'Wireless ANC Earbuds',
+    price: 1999,
+    discount: '40% OFF',
+    rating: 4.5,
+    deliveryTime: '15 mins',
+    image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=300&q=80',
+    description: 'Noise-canceling wireless earbuds with 30-hour battery life and immersive sound quality.'
+  },
+  {
+    id: 'e2',
+    category: 'Electronics',
+    name: '20000mAh Power Bank',
+    price: 1499,
+    discount: 'Flat ₹500 OFF',
+    rating: 4.7,
+    deliveryTime: '20 mins',
+    image: 'https://images.unsplash.com/photo-1609592424089-980479703562?auto=format&fit=crop&w=300&q=80',
+    description: 'High-capacity fast-charging power bank with dual USB ports and Type-C input.'
+  },
+  {
+    id: 'e3',
+    category: 'Electronics',
+    name: 'Amoled Smart Watch',
+    price: 2499,
+    discount: 'Limited Deal',
+    rating: 4.6,
+    deliveryTime: '15 mins',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80',
+    description: 'Sleek smartwatch with heart rate monitoring, SPO2 tracking, and 100+ sports modes.'
+  },
+  {
+    id: 'e4',
+    category: 'Electronics',
+    name: '65W Fast Charger',
+    price: 899,
+    discount: '15% OFF',
+    rating: 4.8,
+    deliveryTime: '12 mins',
+    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=300&q=80',
+    description: 'Universal fast charger compatible with laptops, smartphones, and tablets.'
+  },
+  {
+    id: 'e5',
+    category: 'Electronics',
+    name: 'Bluetooth Party Speaker',
+    price: 3499,
+    discount: '₹1000 OFF',
+    rating: 4.4,
+    deliveryTime: '25 mins',
+    image: 'https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&fit=crop&w=300&q=80',
+    description: 'Powerful 20W portable speaker with RGB lights and deep bass technology.'
+  },
+  {
+    id: 'e6',
+    category: 'Electronics',
+    name: 'Braided USB-C Cable',
+    price: 299,
+    discount: 'Buy 2 @ ₹499',
+    rating: 4.9,
+    deliveryTime: '10 mins',
+    image: 'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?auto=format&fit=crop&w=300&q=80',
+    description: 'Durable 1.5m braided cable for fast charging and high-speed data transfer.'
+  },
+  {
+    id: 'e7',
+    category: 'Electronics',
+    name: 'Laptop Cooling Pad',
+    price: 799,
+    discount: '25% OFF',
+    rating: 4.3,
+    deliveryTime: '20 mins',
+    image: 'https://images.unsplash.com/photo-1587202395156-f61706246473?auto=format&fit=crop&w=300&q=80',
+    description: 'Ergonomic cooling pad with dual silent fans and adjustable height settings.'
+  },
+  {
+    id: 'e8',
+    category: 'Electronics',
+    name: 'Touch Control Desk Lamp',
+    price: 1299,
+    discount: 'New Arrival',
+    rating: 4.7,
+    deliveryTime: '18 mins',
+    image: 'https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&w=300&q=80',
+    description: 'LED desk lamp with three brightness modes and eye-protection technology.'
+  },
+  {
+    id: 'e9',
+    category: 'Electronics',
+    name: 'Portable Mini Fan',
+    price: 499,
+    discount: 'Summer Special',
+    rating: 4.5,
+    deliveryTime: '12 mins',
+    image: 'https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&w=300&q=80',
+    description: 'USB rechargeable mini fan, perfect for travel and desk use during hot days.'
+  },
+  {
+    id: 'e10',
+    category: 'Electronics',
+    name: 'Aluminum Mobile Stand',
+    price: 349,
+    discount: '₹50 Coupon',
+    rating: 4.8,
+    deliveryTime: '10 mins',
+    image: 'https://images.unsplash.com/photo-1586953101511-9669533f86e8?auto=format&fit=crop&w=300&q=80',
+    description: 'Sturdy and adjustable mobile stand for hands-free video calls and movie watching.'
+  },
+  // FASHION
+{
+  id: 'fa1',
+  category: 'Fashion',
+  name: 'Men Regular Fit Cotton T-Shirt',
+  price: 499,
+  discount: '30% OFF',
+  rating: 4.5,
+  deliveryTime: '20 mins',
+  image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=80',
+  description: 'Soft and breathable 100% cotton T-shirt. Perfect for casual wear and everyday comfort.'
+},
+{
+  id: 'fa2',
+  category: 'Fashion',
+  name: 'Women Floral Summer Dress',
+  price: 999,
+  discount: '40% OFF',
+  rating: 4.7,
+  deliveryTime: '25 mins',
+  image: 'https://images.unsplash.com/photo-1495121605193-b116b5b09a6c?auto=format&fit=crop&w=300&q=80',
+  description: 'Elegant floral print summer dress made with lightweight fabric for a stylish and comfortable look.'
+},
+{
+  id: 'fa3',
+  category: 'Fashion',
+  name: 'Men Slim Fit Jeans',
+  price: 1499,
+  discount: '₹300 OFF',
+  rating: 4.6,
+  deliveryTime: '22 mins',
+  image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=300&q=80',
+  description: 'Stretchable slim-fit jeans with a modern cut. Durable fabric and perfect for daily wear.'
+},
+{
+  id: 'fa4',
+  category: 'Fashion',
+  name: 'Women Handbag (Leather Finish)',
+  price: 1299,
+  discount: 'Buy 1 Get 20% OFF',
+  rating: 4.8,
+  deliveryTime: '18 mins',
+  image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=300&q=80',
+  description: 'Premium leather-finish handbag with spacious compartments. Stylish and perfect for office or outings.'
+},
+{
+  id: 'fa5',
+  category: 'Fashion',
+  name: 'Men Sports Running Shoes',
+  price: 2199,
+  discount: '50% OFF',
+  rating: 4.9,
+  deliveryTime: '30 mins',
+  image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80',
+  description: 'Lightweight and breathable running shoes with cushioned sole for maximum comfort and performance.'
+},
+{
+  id: 'fa6',
+  category: 'Fashion',
+  name: 'Women Casual Sneakers',
+  price: 1799,
+  discount: 'Flat ₹400 OFF',
+  rating: 4.6,
+  deliveryTime: '28 mins',
+  image: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=300&q=80',
+  description: 'Trendy casual sneakers designed for all-day comfort. Perfect for college and daily outings.'
+},
+{
+  id: 'fa7',
+  category: 'Fashion',
+  name: 'Unisex Digital Watch',
+  price: 899,
+  discount: 'Limited Deal',
+  rating: 4.4,
+  deliveryTime: '15 mins',
+  image: 'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=300&q=80',
+  description: 'Stylish digital watch with LED display, water resistance, and long-lasting battery life.'
+},
+{
+  id: 'fa8',
+  category: 'Fashion',
+  name: 'Women Ethnic Kurti',
+  price: 799,
+  discount: '20% OFF',
+  rating: 4.7,
+  deliveryTime: '24 mins',
+  image: 'https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=300&q=80',
+  description: 'Beautiful printed ethnic kurti made from soft rayon fabric. Perfect for festive and casual wear.'
+},
+{
+  id: 'fa9',
+  category: 'Fashion',
+  name: 'Men Formal Shirt',
+  price: 1099,
+  discount: 'Buy 2 Save ₹300',
+  rating: 4.6,
+  deliveryTime: '20 mins',
+  image: 'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=300&q=80',
+  description: 'Premium formal shirt with wrinkle-resistant fabric. Ideal for office and business meetings.'
+},
+{
+  id: 'fa10',
+  category: 'Fashion',
+  name: 'Women Sunglasses UV400',
+  price: 599,
+  discount: 'Buy 1 Get 1',
+  rating: 4.5,
+  deliveryTime: '12 mins',
+  image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=300&q=80',
+  description: 'Stylish UV400 protected sunglasses. Protect your eyes while enhancing your fashion statement.'
+},
+
+
+ // EVENTS WITH PACKAGES
+{
+  id: 'ev1',
+  category: 'Events',
+  name: 'Birthday Party Package - Basic',
+  price: 4999,
+  discount: '10% OFF',
+  rating: 4.6,
+  deliveryTime: 'Book 3 Days Before',
+  image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=300&q=80',
+  description: 'Balloon decoration, cake table setup, happy birthday banner and basic lighting. Suitable for 20-25 guests.'
+},
+{
+  id: 'ev2',
+  category: 'Events',
+  name: 'Birthday Party Package - Premium',
+  price: 9999,
+  discount: 'Free Photography',
+  rating: 4.8,
+  deliveryTime: 'Book 5 Days Before',
+  image: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=300&q=80',
+  description: 'Theme decoration, balloon arch, 2kg cake, DJ music setup and photography for up to 50 guests.'
+},
+{
+  id: 'ev3',
+  category: 'Events',
+  name: 'Wedding Decoration Package',
+  price: 49999,
+  discount: '₹5000 OFF',
+  rating: 4.9,
+  deliveryTime: 'Book 10 Days Before',
+  image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=300&q=80',
+  description: 'Grand wedding stage decoration with floral arrangements, LED lighting, welcome board and seating setup.'
+},
+{
+  id: 'ev4',
+  category: 'Events',
+  name: 'Corporate Event Package',
+  price: 29999,
+  discount: '20% OFF',
+  rating: 4.7,
+  deliveryTime: 'Book 7 Days Before',
+  image: 'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=300&q=80',
+  description: 'Corporate event stage setup, sound system, projector screen, banners and seating arrangement.'
+},
+{
+  id: 'ev5',
+  category: 'Events',
+  name: 'Baby Shower Decoration Package',
+  price: 7999,
+  discount: 'Free Welcome Board',
+  rating: 4.8,
+  deliveryTime: 'Book 4 Days Before',
+  image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=300&q=80',
+  description: 'Pastel theme decoration, balloon arch, cake table decor and backdrop setup for baby shower celebrations.'
+},
+{
+  id: 'ev6',
+  category: 'Events',
+  name: 'Anniversary Celebration Package',
+  price: 6999,
+  discount: '15% OFF',
+  rating: 4.6,
+  deliveryTime: 'Book 3 Days Before',
+  image: 'https://images.unsplash.com/photo-1520857014576-2c4f4c972b57?auto=format&fit=crop&w=300&q=80',
+  description: 'Romantic candlelight decoration, LED name board, table decoration and background setup.'
+},
+{
+  id: 'ev7',
+  category: 'Events',
+  name: 'Engagement Ceremony Package',
+  price: 19999,
+  discount: 'Free Flower Decor',
+  rating: 4.7,
+  deliveryTime: 'Book 7 Days Before',
+  image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=300&q=80',
+  description: 'Beautiful engagement stage setup with floral decorations, lighting and seating arrangement.'
+},
+{
+  id: 'ev8',
+  category: 'Events',
+  name: 'Housewarming Ceremony Package',
+  price: 5999,
+  discount: '10% OFF',
+  rating: 4.5,
+  deliveryTime: 'Book 3 Days Before',
+  image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=300&q=80',
+  description: 'Traditional decoration with flowers, entrance decor, pooja setup and welcome board.'
+},
+{
+  id: 'ev9',
+  category: 'Events',
+  name: 'College Cultural Event Package',
+  price: 25999,
+  discount: '₹2000 OFF',
+  rating: 4.6,
+  deliveryTime: 'Book 8 Days Before',
+  image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=300&q=80',
+  description: 'Large stage setup with sound system, lighting, banners and seating for cultural programs.'
+},
+{
+  id: 'ev10',
+  category: 'Events',
+  name: 'DJ Night Party Package',
+  price: 14999,
+  discount: 'Free LED Lights',
+  rating: 4.8,
+  deliveryTime: 'Book 5 Days Before',
+  image: 'https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=300&q=80',
+  description: 'Professional DJ setup with sound system, dance floor lighting and party decoration.'
+},
+]
