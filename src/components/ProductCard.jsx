@@ -4,6 +4,7 @@ import { useCart } from '../store/cartStore';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
+  const isUpcomingEvent = product.category === 'Upcoming Events';
 
   return (
     <div className="bg-white rounded-2xl border border-gray-100 p-3 hover:shadow-xl hover:shadow-emerald-500/10 transition-all group flex flex-col h-full overflow-hidden relative">
@@ -52,7 +53,7 @@ const ProductCard = ({ product }) => {
             className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 text-sm"
           >
             <ShoppingCart size={16} />
-            <span>ADD</span>
+            <span>{isUpcomingEvent ? 'BOOK' : 'ADD'}</span>
           </button>
         </div>
       </div>

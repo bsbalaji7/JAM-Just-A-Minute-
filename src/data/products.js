@@ -673,15 +673,15 @@ export const products = [
 ]
 export const upcomingEvents = [
   {
-    eventName: 'SPB Golden Night Tribute',
-    language: 'Tamil',
+    eventName: 'Shakira (Feeding India Concert)',
+    language: 'English',
     category: 'Music Concert',
-    location: 'Kamarajar Arangam, Chennai',
-    date: '2026-04-12',
+    location: 'Mahalaxmi Race Course,Mumbai',
+    date: '2026-4-10',
     time: '7:00 PM',
-    ticketPrice: 500,
-    image: 'images/spb.jpg',
-    description: 'A tribute concert celebrating the legendary singer SP Balasubrahmanyam.'
+    ticketPrice: 1900,
+    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80',
+    description: 'The Feeding India Concert returns in 2026 bigger,bolder,and more unforgettable tha ever'
   },
   {
     eventName: 'Anirudh Live Concert',
@@ -691,7 +691,7 @@ export const upcomingEvents = [
     date: '2026-05-02',
     time: '6:00 PM',
     ticketPrice: 1500,
-    image: 'images/anirudh.jpg',
+    image: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=80',
     description: 'Live performance by Anirudh Ravichander featuring his blockbuster songs.'
   },
   {
@@ -702,7 +702,7 @@ export const upcomingEvents = [
     date: '2026-05-20',
     time: '7:30 PM',
     ticketPrice: 1200,
-    image: 'images/yuvan.jpg',
+    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
     description: "Enjoy live performances of Yuvan Shankar Raja's popular hits."
   },
   {
@@ -713,7 +713,7 @@ export const upcomingEvents = [
     date: '2026-04-18',
     time: '8:00 PM',
     ticketPrice: 399,
-    image: 'images/comedy.jpg',
+    image: 'https://images.unsplash.com/photo-1527224857830-43a7acc85260?auto=format&fit=crop&w=1200&q=80',
     description: 'A hilarious Tamil stand-up comedy show featuring famous comedians.'
   },
   {
@@ -724,7 +724,7 @@ export const upcomingEvents = [
     date: '2026-04-25',
     time: '11:00 AM',
     ticketPrice: 200,
-    image: 'images/foodfest.jpg',
+    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80',
     description: 'Explore delicious Tamil Nadu cuisine from top chefs and restaurants.'
   },
   {
@@ -735,7 +735,7 @@ export const upcomingEvents = [
     date: '2026-12-20',
     time: '6:30 PM',
     ticketPrice: 800,
-    image: 'images/classical.jpg',
+    image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1200&q=80',
     description: 'Carnatic music performances by top classical musicians.'
   },
   {
@@ -746,7 +746,7 @@ export const upcomingEvents = [
     date: '2026-04-10',
     time: '6:00 PM',
     ticketPrice: 300,
-    image: 'images/drama.jpg',
+    image: 'https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1200&q=80',
     description: 'A traditional Tamil stage drama performance.'
   },
   {
@@ -757,7 +757,7 @@ export const upcomingEvents = [
     date: '2026-06-15',
     time: '9:00 AM',
     ticketPrice: 500,
-    image: 'images/hackathon.jpg',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
     description: 'A 24-hour hackathon for developers, designers, and innovators.'
   },
   {
@@ -768,7 +768,7 @@ export const upcomingEvents = [
     date: '2026-05-05',
     time: '5:00 PM',
     ticketPrice: 350,
-    image: 'images/dance.jpg',
+    image: 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=1200&q=80',
     description: 'Dance performances featuring popular Tamil movie songs.'
   },
   {
@@ -779,7 +779,7 @@ export const upcomingEvents = [
     date: '2026-07-10',
     time: '10:00 AM',
     ticketPrice: 100,
-    image: 'images/literature.jpg',
+    image: 'https://images.unsplash.com/photo-1524578271613-d550eacf6090?auto=format&fit=crop&w=1200&q=80',
     description: 'Meet famous Tamil authors and explore Tamil literature.'
   }
 ];
