@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Category from "./pages/Category";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Payment from "./pages/Payment";
 
 import { CartProvider } from "./store/cartStore";
 import { AuthProvider, useAuth } from "./store/authStore";
@@ -17,7 +18,7 @@ import { AuthProvider, useAuth } from "./store/authStore";
 
 /* -------- PROTECTED ROUTE -------- */
 
-const ProtectedRoute = ({ children }) => {
+function ProtectedRoute({ children }) {
 
   const { user } = useAuth();
 
@@ -26,22 +27,27 @@ const ProtectedRoute = ({ children }) => {
   }
 
   return children;
-};
+}
 
 
 /* -------- MAIN APP -------- */
 
 function App() {
+
   return (
+
     <AuthProvider>
+
       <CartProvider>
 
         <Router>
 
           <div className="min-h-screen bg-gray-50 text-gray-900 font-sans selection:bg-emerald-100 selection:text-emerald-900">
 
+            {/* NAVBAR */}
             <Navbar />
 
+            {/* MAIN CONTENT */}
             <main className="max-w-7xl mx-auto px-4">
 
               <Routes>
@@ -58,7 +64,7 @@ function App() {
                 {/* REGISTER */}
                 <Route path="/register" element={<Register />} />
 
-                {/* PROTECTED PROFILE */}
+                {/* PROFILE (PROTECTED) */}
                 <Route
                   path="/profile"
                   element={
@@ -68,13 +74,27 @@ function App() {
                   }
                 />
 
+                {/* PAYMENT (PROTECTED) */}
+                <Route
+                  path="/payment"
+                  element={
+                    <ProtectedRoute>
+                      <Payment />
+                    </ProtectedRoute>
+                  }
+                />
+
               </Routes>
 
             </main>
 
+            {/* CART SIDEBAR */}
             <CartSidebar />
 
+            {/* FLOATING CHAT BOT */}
             <FloatingBot />
+
+
 
             {/* FOOTER */}
 
@@ -83,13 +103,17 @@ function App() {
               <div className="max-w-7xl mx-auto px-4 text-center">
 
                 <div className="flex items-center justify-center gap-2 mb-4">
+
                   <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-white">
+
                     <span className="text-sm font-black">J</span>
+
                   </div>
 
                   <span className="text-xl font-black tracking-tighter">
                     JAM
                   </span>
+
                 </div>
 
                 <p className="text-gray-400 text-sm font-medium">
@@ -121,7 +145,9 @@ function App() {
         </Router>
 
       </CartProvider>
+
     </AuthProvider>
+
   );
 }
 

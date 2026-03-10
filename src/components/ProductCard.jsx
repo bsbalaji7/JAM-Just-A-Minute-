@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, Clock, ShoppingCart } from 'lucide-react';
 import { useCart } from '../store/cartStore';
+import { formatInr } from '../utils/currency';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
@@ -45,7 +46,7 @@ const ProductCard = ({ product }) => {
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-dashed border-gray-100">
           <div className="flex flex-col">
-            <span className="text-lg font-black text-gray-900 leading-none">₹{product.price}</span>
+            <span className="text-lg font-black text-gray-900 leading-none">{formatInr(product.price)}</span>
             <span className="text-[10px] text-gray-400 font-medium">inclusive of taxes</span>
           </div>
           <button 

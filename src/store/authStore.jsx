@@ -2,11 +2,24 @@ import React, { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
 
+const getSavedUser = () => {
+  if (typeof window === "undefined") return null;
+  const saved = localStorage.getItem("jam_user");
+  if (!saved) return null;
+  try {
+    const parsed = JSON.parse(saved);
+    if (!parsed || typeof parsed !== "object") return null;
+    return parsed;
+  } catch (error) {
+    console.warn("Failed to parse saved user, clearing invalid value.", error);
+    localStorage.removeItem("jam_user");
+    return null;
+  }
+};
+
 export const AuthProvider = ({ children }) => {
 
-  const [user, setUser] = useState(
-    JSON.parse(localStorage.getItem("jam_user")) || null
-  );
+  const [user, setUser] = useState(getSavedUser);
 
   /* ================= LOGIN ================= */
 
