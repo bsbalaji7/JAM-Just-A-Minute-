@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { Star, Clock, ShoppingCart, Eye } from "lucide-react";
-import { useCart } from "../store/cartStore";
-import ARPreview from "./ARPreview";
+import React from 'react';
+import { Star, Clock, ShoppingCart } from 'lucide-react';
+import { useCart } from '../store/cartStore';
 
 const ProductCard = ({ product }) => {
 
   const { addToCart } = useCart();
-  const [showAR, setShowAR] = useState(false);
 
   return (
     <>
@@ -62,28 +60,18 @@ const ProductCard = ({ product }) => {
             {product.description}
           </p>
 
-          {/* PRICE + ADD */}
-          <div className="flex items-center justify-between mt-auto pt-3 border-t border-dashed border-gray-100">
-
-            <div className="flex flex-col">
-              <span className="text-lg font-black text-gray-900 leading-none">
-                ₹{product.price}
-              </span>
-              <span className="text-[10px] text-gray-400 font-medium">
-                inclusive of taxes
-              </span>
-            </div>
-
-            <button
-              onClick={() => addToCart(product)}
-              className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 text-sm"
-            >
-              <ShoppingCart size={16} />
-              <span>ADD</span>
-            </button>
-
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-dashed border-gray-100">
+          <div className="flex flex-col">
+            <span className="text-lg font-black text-gray-900 leading-none">₹{product.price}</span>
+            <span className="text-[10px] text-gray-400 font-medium">inclusive of taxes</span>
           </div>
-
+          <button 
+            onClick={() => addToCart(product)}
+            className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 text-sm"
+          >
+            <ShoppingCart size={16} />
+            <span>ADD</span>
+          </button>
         </div>
 
       </div>

@@ -2,11 +2,23 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const CartContext = createContext();
 
+const getSavedCart = () => {
+  if (typeof window === 'undefined') return [];
+  const saved = localStorage.getItem('jam_cart');
+  if (!saved) return [];
+  try {
+    const parsed = JSON.parse(saved);
+    if (!Array.isArray(parsed)) return [];
+    return parsed;
+  } catch (error) {
+    console.warn('Failed to parse saved cart, clearing invalid value.', error);
+    localStorage.removeItem('jam_cart');
+    return [];
+  }
+};
+
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState(() => {
-    const saved = localStorage.getItem('jam_cart');
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [cart, setCart] = useState(getSavedCart);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
