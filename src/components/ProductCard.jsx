@@ -97,6 +97,7 @@ const ProductCard = ({ product }) => {
       )}
 
     </>
+    
   );
 };
 
