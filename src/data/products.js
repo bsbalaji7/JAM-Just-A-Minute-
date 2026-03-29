@@ -1,8 +1,5 @@
 export const products = [
   // GROCERY
-  
-
-  // GROCERY
   {
     id: 'g1',
     category: 'Grocery',
