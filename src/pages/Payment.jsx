@@ -13,7 +13,7 @@ const Payment = () => {
   }, [location.state]);
 
   const handlePayment = () => {
-    alert("Payment Successful 🎉");
+    alert("Order placed ✅ 🎉");
     navigate("/");
   };
 
